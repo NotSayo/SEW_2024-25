@@ -68,10 +68,6 @@ public class LibraryContext : DbContext
             .WithMany(s => s.ReturnedBooks)
             .HasForeignKey(s => s.ReturnLibrarianId);
 
-
-
-
-
         base.OnModelCreating(builder);
     }
 }
