@@ -1,0 +1,10 @@
+*/bin/
+*/*/bin/
+*/obj/
+*/*/obj/
+*/.idea/
+*/*/.idea/
+/.idea/
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
