@@ -1,5 +1,6 @@
 ﻿using ConsoleApp.CollectorThingy;
 using ConsoleApp.CraneMachineThingy;
+using ConsoleApp.KebabThingy;
 
 namespace ConsoleApp;
 
@@ -10,7 +11,8 @@ class Program
     {
         // Semaphore_In_Out.TestSemaphore(10);
         //StartCollector();
-        StartCraneMachine();
+        //StartCraneMachine();
+        StartKebab();
     }
 
     static void StartCollector()
@@ -22,6 +24,11 @@ class Program
     static void StartCraneMachine()
     {
         new Thread(new Crane() {Code = "Crane"}.Run).Start();
+    }
+
+    static void StartKebab()
+    {
+        new Thread(new KebabShop().Run).Start();
     }
 
 
