@@ -3,6 +3,7 @@
 public class Semaphore_In_Out
 {
     private static SemaphoreSlim _semaphoreSlim = new SemaphoreSlim(2);
+
     public static void TestSemaphore(int amount)
     {
         for (int i = 1; i < amount + 1; i++)
