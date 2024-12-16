@@ -1,6 +1,7 @@
 ﻿using ConsoleApp.CollectorThingy;
 using ConsoleApp.CraneMachineThingy;
 using ConsoleApp.KebabThingy;
+using ConsoleApp.Race;
 
 namespace ConsoleApp;
 
@@ -12,7 +13,8 @@ class Program
         // Semaphore_In_Out.TestSemaphore(10);
         //StartCollector();
         //StartCraneMachine();
-        StartKebab();
+        // StartKebab();
+        StartRace();
     }
 
     static void StartCollector()
@@ -29,6 +31,16 @@ class Program
     static void StartKebab()
     {
         new Thread(new KebabShop().Run).Start();
+    }
+
+    static void StartRace()
+    {
+        new Thread(new RaceController().Run).Start();
+    }
+
+    static void ParameterThread(string s)
+    {
+        Console.WriteLine(s);
     }
 
 
