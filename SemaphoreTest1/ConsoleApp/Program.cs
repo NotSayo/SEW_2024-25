@@ -1,5 +1,6 @@
 ﻿using ConsoleApp.CollectorThingy;
 using ConsoleApp.CraneMachineThingy;
+using ConsoleApp.HarborThingy;
 using ConsoleApp.KebabThingy;
 using ConsoleApp.Race;
 
@@ -14,7 +15,8 @@ class Program
         //StartCollector();
         //StartCraneMachine();
         // StartKebab();
-        StartRace();
+        // StartRace();
+        StartHarbor();
     }
 
     static void StartCollector()
@@ -41,6 +43,11 @@ class Program
     static void ParameterThread(string s)
     {
         Console.WriteLine(s);
+    }
+
+    static void StartHarbor()
+    {
+        new Thread(new Harbor().Run).Start();
     }
 
 
