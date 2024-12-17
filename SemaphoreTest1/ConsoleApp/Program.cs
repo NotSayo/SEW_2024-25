@@ -1,8 +1,9 @@
 ﻿using ConsoleApp.CollectorThingy;
+using ConsoleApp.ConveyorBeltThingy;
 using ConsoleApp.CraneMachineThingy;
 using ConsoleApp.HarborThingy;
 using ConsoleApp.KebabThingy;
-using ConsoleApp.Race;
+using ConsoleApp.RaceThingy;
 
 namespace ConsoleApp;
 
@@ -16,7 +17,8 @@ class Program
         //StartCraneMachine();
         // StartKebab();
         // StartRace();
-        StartHarbor();
+        // StartHarbor();
+        StartBelt();
     }
 
     static void StartCollector()
@@ -48,6 +50,11 @@ class Program
     static void StartHarbor()
     {
         new Thread(new Harbor().Run).Start();
+    }
+
+    static void StartBelt()
+    {
+        new Thread(new Belt().Run).Start();
     }
 
 

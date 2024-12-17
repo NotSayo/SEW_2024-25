@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp.Race;
+﻿namespace ConsoleApp.RaceThingy;
 
 public class RaceController
 {
