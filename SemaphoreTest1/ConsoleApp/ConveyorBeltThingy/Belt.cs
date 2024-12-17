@@ -29,7 +29,7 @@ public class Belt
     {
         if(Thingies.Count(s => s.Location == "Unprocessed") == 0)
             Thingies.Add(new Thingy());
-        foreach (var thingy in Thingies)
+        foreach (var thingy in Thingies.Where(s => s.Location != "Lager"))
             thingy.Move();
 
         if (Thingies.Count(s => s.Location == "Machine A") >= 1)
