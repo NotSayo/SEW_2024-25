@@ -20,7 +20,9 @@ public class Train
             rail = Controller.Rails.First(r => r is { Start: "Tokyo", End: "Shizuoka" } or { Start: "Shizuoka", End: "Tokyo" });
             GoToShizuoka(rail);
             counter++;
-            if (counter == 2)
+
+            // comment this statement if you want them to run endlessly
+            if (counter >= 2)
             {
                 rail = Controller.Rails.First(r => r is { Start: "Shizuoka", End: "Kyoto" } or
                     { Start: "Kyoto", End: "Shizuoka" });
@@ -29,6 +31,8 @@ public class Train
                 Console.WriteLine($"{Name} FINISHED!!!");
                 return;
             }
+
+
         }
     }
 
