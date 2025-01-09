@@ -4,6 +4,7 @@ using ConsoleApp.CraneMachineThingy;
 using ConsoleApp.HarborThingy;
 using ConsoleApp.KebabThingy;
 using ConsoleApp.RaceThingy;
+using ConsoleApp.TrainThingy;
 
 namespace ConsoleApp;
 
@@ -12,15 +13,16 @@ class Program
 
     static void Main(string[] args)
     {
+
         // Semaphore_In_Out.TestSemaphore(10);
         //StartCollector();
         //StartCraneMachine();
         // StartKebab();
         // StartRace();
         // StartHarbor();
-        StartBelt();
+        //StartBelt();
+        StartTrains();
     }
-
     static void StartCollector()
     {
         CollectorManager manager = new CollectorManager();
@@ -57,5 +59,8 @@ class Program
         new Thread(new Belt().Run).Start();
     }
 
-
+    static void StartTrains()
+    {
+        new Thread(new TrainController(100).Run).Start();
+    }
 }
