@@ -26,6 +26,7 @@ public class Crane
 
             foreach (var machine in Machines)
                 MoveToMachine(machine.Code);
+
             MoveToStorage();
             Console.WriteLine("All machines have been processed!");
             Thread.Sleep(2000);

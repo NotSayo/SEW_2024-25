@@ -19,9 +19,9 @@ class Program
         //StartCraneMachine();
         // StartKebab();
         // StartRace();
-        // StartHarbor();
+        StartHarbor();
         //StartBelt();
-        StartTrains();
+        //StartTrains();
     }
     static void StartCollector()
     {
