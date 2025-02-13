@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "View", "View\View.csproj", "{5F0F88D7-0DEC-4D73-8475-A278D517C034}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{15AB26FD-CC3D-4C97-9629-61EC116D66A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OuterrimRepository", "OuterrimRepository\OuterrimRepository.csproj", "{03440795-FFD9-4B26-A37D-AF959323605D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F0F88D7-0DEC-4D73-8475-A278D517C034}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F0F88D7-0DEC-4D73-8475-A278D517C034}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F0F88D7-0DEC-4D73-8475-A278D517C034}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F0F88D7-0DEC-4D73-8475-A278D517C034}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15AB26FD-CC3D-4C97-9629-61EC116D66A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15AB26FD-CC3D-4C97-9629-61EC116D66A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15AB26FD-CC3D-4C97-9629-61EC116D66A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15AB26FD-CC3D-4C97-9629-61EC116D66A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03440795-FFD9-4B26-A37D-AF959323605D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03440795-FFD9-4B26-A37D-AF959323605D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03440795-FFD9-4B26-A37D-AF959323605D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03440795-FFD9-4B26-A37D-AF959323605D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

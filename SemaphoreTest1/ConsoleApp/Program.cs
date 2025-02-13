@@ -19,9 +19,9 @@ class Program
         //StartCraneMachine();
         // StartKebab();
         // StartRace();
-        StartHarbor();
+        //StartHarbor();
         //StartBelt();
-        //StartTrains();
+        StartTrains();
     }
     static void StartCollector()
     {
@@ -63,4 +63,5 @@ class Program
     {
         new Thread(new TrainController(100).Run).Start();
     }
+
 }
