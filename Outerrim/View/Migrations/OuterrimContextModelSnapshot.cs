@@ -86,7 +86,7 @@ namespace View.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("StructureId")
+                    b.Property<int>("Structure")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("SpecificationId");

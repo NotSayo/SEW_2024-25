@@ -19,4 +19,8 @@
       <ProjectReference Include="..\OuterrimRepository\OuterrimRepository.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Components\ViewComponents\AircraftsList.razor" />
+    </ItemGroup>
+
 </Project>

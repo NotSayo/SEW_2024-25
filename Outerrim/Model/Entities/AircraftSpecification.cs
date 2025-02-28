@@ -9,7 +9,7 @@ public class AircraftSpecification
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     [Key]
     public int SpecificationId { get; set; }
-    public int StructureId { get; set; }
+    public int Structure { get; set; }
     public int FuelTankCapacity { get; set; }
     public int MinSpeed { get; set; }
     public int MaxSpeed { get; set; }

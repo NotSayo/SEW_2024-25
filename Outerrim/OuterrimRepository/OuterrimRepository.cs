@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.Linq.Expressions;
+using Microsoft.EntityFrameworkCore;
 using Model;
 
 namespace OuterrimRepository;
@@ -51,10 +52,23 @@ public class OuterrimRepository<TEntity> : IRepository<TEntity> where TEntity : 
         return await Entity.Skip(start).Take(count).ToListAsync();
     }
 
-    public async Task<List<TEntity>> ReadAllAsync()
+    public Task<List<TEntity>> ReadAllAsync()
     {
-        return await Entity.ToListAsync();
+        return Entity.ToListAsync();
     }
+
+    public async Task<List<TEntity>> ReadAllAsync(Expression<Func<TEntity, object>>[]? includes = null)
+    {
+        IQueryable<TEntity> query = Entity;
+
+        foreach (var include in includes)
+        {
+            query = query.Include(include);
+        }
+
+        return await query.ToListAsync();
+    }
+
 
     public async Task DeleteAsync(int id, TEntity t)
     {

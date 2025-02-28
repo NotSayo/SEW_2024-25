@@ -20,6 +20,7 @@ builder.Services.AddDbContext<OuterrimContext>(options =>
 });
 
 builder.Services.AddScoped<IRepository<CrimeSyndicate>, OuterrimRepository<CrimeSyndicate>>();
+builder.Services.AddScoped<IRepository<Aircraft>, OuterrimRepository<Aircraft>>();
 
 var app = builder.Build();
 

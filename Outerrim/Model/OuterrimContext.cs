@@ -22,6 +22,14 @@ public class OuterrimContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
+        builder.Entity<Aircraft>()
+            .Navigation(a => a.Specification).AutoInclude();
+        builder.Entity<Aircraft>()
+            .Navigation(a => a.Compartments).AutoInclude();
+        builder.Entity<Compartment>()
+            .Navigation(c => c.Machineries).AutoInclude();
+
+
         builder.Entity<AircraftCrew>()
             .HasKey(c => new {c.AircraftId, c.MercenaryId});
 
