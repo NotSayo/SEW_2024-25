@@ -4,6 +4,7 @@ using Model;
 
 namespace OuterrimRepository;
 
+
 public class OuterrimRepository<TEntity> : IRepository<TEntity> where TEntity : class
 {
     private OuterrimContext _context;
@@ -32,7 +33,13 @@ public class OuterrimRepository<TEntity> : IRepository<TEntity> where TEntity : 
     public async Task UpdateAsync(int id, TEntity t)
     {
         var entity = await Entity.FindAsync(id);
-        _context.Entry(entity).CurrentValues.SetValues(t);
+        _context.Entry(entity!).CurrentValues.SetValues(t);
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task UpdateAsync(TEntity t)
+    {
+        _context.Entry(t).CurrentValues.SetValues(t);
         await _context.SaveChangesAsync();
     }
 
@@ -55,18 +62,6 @@ public class OuterrimRepository<TEntity> : IRepository<TEntity> where TEntity : 
     public Task<List<TEntity>> ReadAllAsync()
     {
         return Entity.ToListAsync();
-    }
-
-    public async Task<List<TEntity>> ReadAllAsync(Expression<Func<TEntity, object>>[]? includes = null)
-    {
-        IQueryable<TEntity> query = Entity;
-
-        foreach (var include in includes)
-        {
-            query = query.Include(include);
-        }
-
-        return await query.ToListAsync();
     }
 
 

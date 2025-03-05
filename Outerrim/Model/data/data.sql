@@ -30,3 +30,5 @@ INSERT INTO Machineries (MachineryId, Label, Function, CompartmentId) VALUES
     (11, 'CO2 Scrubber', 'Removes CO2 from the air', 3),
     (12, 'High-Capacity Battery', 'Provides power to onboard systems', 4);
 
+INSERT INTO AircraftCrewsJT(AircraftId, MercenaryId, JoinedAt) VALUES (1, 1, CURRENT_DATE);
+

@@ -7,6 +7,7 @@ public interface IRepository<TEntity> where TEntity : class
     Task<List<TEntity>> CreateRangeAsync(List<TEntity> list);
 
     Task UpdateAsync(int id, TEntity t);
+    Task UpdateAsync(TEntity t);
 
     Task UpdateRangeAsync(List<TEntity> list);
 
@@ -17,6 +18,8 @@ public interface IRepository<TEntity> where TEntity : class
     Task<List<TEntity>> ReadAllAsync();
 
     Task DeleteAsync(int id, TEntity t);
+    Task DeleteAsync(int id);
+    Task DeleteAsync(TEntity t);
 
     Task DeleteRangeAsync(List<TEntity> list);
 }
